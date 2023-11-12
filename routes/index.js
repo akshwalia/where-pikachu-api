@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
   res.status(200).json({message: "Welcome to Where's Pikachu API"});
 });
 
-
 router.get('/leaderboard/:game', async function(req, res, next) {
   const game = req.params.game;
 
