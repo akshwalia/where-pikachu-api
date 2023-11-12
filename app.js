@@ -14,7 +14,7 @@ const { log } = require('console');
 var app = express(); 
 
 async function connect() {
-  await mongoose.connect(process.env.MONGODB_URI);
+  await mongoose.connect(process.env.MONGODB_URI, {strictQuery: true});
   console.log('Connected to database!');
 }
 connect();
